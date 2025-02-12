@@ -1,0 +1,12 @@
+<h1>{{name}}</h1>
+<dl>
+    <td>Nombre:</td>
+    <dd>{{name}}</dd>
+</dl>
+
+<button
+*ngIf="name != 'Spiderman'" 
+(click)="changeName()"
+class="btn btn-primary mx-2">
+Cambiar Nombre
+</button>

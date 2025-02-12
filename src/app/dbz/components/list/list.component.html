@@ -1,0 +1,13 @@
+<h4>Litado</h4>
+<ul class="list-group">
+    <li *ngFor="let character of characterList; let i = index; last as isLast " 
+    class="list-group-item d-flex justify-content-between"
+    [ngClass]="{'list-group-item-success': isLast}">
+    <div>
+        <span class="text-primary">{{ i + 1}} </span>
+        <span>{{character.name}} - </span><strong>power: </strong> <span>{{character.power}}</span>
+    </div>    
+        <button (click)="emitDeleteCharacter(character.id || '0')" class="btn btn-danger">x</button>
+    </li>
+
+</ul>
